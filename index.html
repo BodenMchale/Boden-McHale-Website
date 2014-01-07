@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <title>Wiowise : Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/wiowise.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/wiowise_icon.png">
+  </head>
+
+  <body>
+
+  <div class="jumbotron">
+      <h1>Hannah Gizaw:</h1>
+      <p>Your mission - should you choose to accept it - is to solve the following three puzzles. <br/> Waiting for you at the end of these puzzles is a unique and (possibly) delicious prize.</p>
+
+  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-danger text-center">
+                  <div class="panel-heading text-center" style="background-color:white;">
+                        Solve this jigsaw puzzle to unlock the next puzzle!
+                  </div>
+
+                  <div class="panel-body">
+                        <button class="btn-lg btn-success text-center" style="width:100%; margin-bottom:10%;" onclick="window.open('http://www.jigsawplanet.com/?rc=play&pid=18133daa1969','_blank');">
+                            First Puzzle</button>
+                        <br />
+                        <button class="btn btn-info" onclick="alert('Enter the text shown when you beat the puzzle to continue! It starts with a C and ends with an exclamation point.')">Click me for a hint!</button>
+                        <button class="btn btn-danger" onclick="
+                        var x = prompt('What is your answer?','Answer here!');
+                        if (x == 'Congratulations!')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel2').fadeToggle('slow','linear');
+                        }
+                        else if (x == 'Congratulations')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel2').fadeToggle('slow','linear');
+                        }
+                        else if (x == 'congratulations')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel2').fadeToggle('slow','linear');
+                        }
+                        else if (x == 'congratulations!')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel2').fadeToggle('slow','linear');
+                        }
+                        else
+                        {
+                        alert('Not quite Hannah. Try again!')
+                        }
+                        ">Click me to answer!
+                        </button>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-danger text-center" id="panel2" style="display:none;">
+                <div class="panel-heading text-center" style="background-color:white;">
+                    Solve this riddle to unlock the next puzzle!
+                </div>
+
+                <div class="panel-body">
+                    <button class="btn-lg btn-success text-center" style="width:100%; margin-bottom:10%;" data-toggle='modal' data-target='#myModal'>Second Puzzle</button>
+                    <br />
+                    <button class="btn btn-info" onclick="alert('Yours is different from mine!')">Click me for a hint!</button>
+                    <button class="btn btn-danger" onclick="
+                        var x = prompt('What is your answer?','Answer here!');
+                        if (x == 'Skin')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel3').fadeToggle('slow','linear');
+                        }
+                        else if(x == 'skin')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel3').fadeToggle('slow','linear');
+                        }
+                        else
+                        {
+                        alert('Not quite Hannah. Try again!')
+                        }
+                        ">Click me to answer!
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-danger text-center" id="panel3" style="display:none;">
+                <div class="panel-heading text-center" style="background-color:white;">
+                    Solve this calculus equation to unlock your prize!
+                </div>
+
+                <div class="panel-body">
+                    <button class="btn-lg btn-success text-center" style="width:100%; margin-bottom:10%;" data-toggle='modal' data-target='#myModal1'>Final Puzzle</button>
+                    <br />
+                    <button class="btn btn-info" onclick="alert('Just kidding!'); $('#panel4').fadeToggle('slow','linear');">Click me for a hint!</button>
+                    <button class="btn btn-danger" onclick="
+                        var x = prompt('What is your answer?','Answer here!');
+                        if (x == 'dx^2')
+                        {
+                        alert('Correct! You unlocked the next puzzle, Hannah!');
+                        $('#panel4').fadeToggle('slow','linear');
+                        }
+                        else
+                        {
+                        alert('Not quite Hannah. Try again!')
+                        }
+                        ">Click me to answer!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id ="panel4" style="display:none;">
+            <button class="btn-lg btn-success text-center" style="width:100%;" onclick="window.location.href='coming_soon.html'">Almost there! Click me!</button>
+        </div>
+    </div>
+</div>
+
+  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Second Puzzle - Riddle </h4>
+              </div>
+              <div class="modal-body">
+                  <p>You wear me every day but you never put me on.<br/>
+                      I will change colors if you leave me out too long.<br/>
+</br>
+                      What am I?</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Okay!</button>
+              </div>
+          </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title" id="myModalLabel">Second Puzzle - Riddle </h4>
+              </div>
+              <div class="modal-body">
+                  <img src="img/calc.jpg" style="width:500px;">
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">What? No!</button>
+              </div>
+          </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  <script>
+      $('#myModal').modal(options);
+  </script>
+  </body>
+</html>
