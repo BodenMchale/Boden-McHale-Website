@@ -1,0 +1,88 @@
+element.style{
+    background-color:#ebebeb;
+}
+
+body{
+    background-color:#e1e1e1;
+}
+
+#mainBlogEditorPanel{
+    margin-top:75px;
+}
+
+.panel-title{
+    text-align:center;
+    font-size:87%;
+    font-weight:bold;
+}
+
+input:focus {outline: none; }
+
+.blogSidebar{
+    height:6%;
+
+    border-radius:0;
+}
+
+.blogSidebar a:hover{
+    text-decoration:none;
+}
+
+#urlPanel{
+    margin-bottom:6px;
+
+
+}
+
+#urlHeader{
+    height:6%;
+    border-radius:0;
+    font-size:90%;
+
+
+}
+
+#titlePanel{
+    margin-bottom:6px;
+
+}
+
+#titleHeader{
+    height:6%;
+    border-radius:0;
+    font-size:90%;
+
+
+}
+
+#title{
+    height:13%;
+    border-bottom:2px solid #e1e1e1;
+}
+
+#content{
+    height:30%;
+    border-bottom:2px solid #e1e1e1;
+}
+
+#attachments{
+    height:26%;
+    margin-bottom:-20px;
+}
+
+.accordion-body{
+    font-size:90%;
+    height:20%;
+}
+
+.input-group-addon{
+    margin-bottom:5px;
+}
+
+.panel-default>.panel-heading{
+    background-color:white;
+}
+
+.modal-backdrop {
+    background: none;
+}
