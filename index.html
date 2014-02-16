@@ -1,311 +1,237 @@
-<html>
-  <head>
-    <title>Leo & Cygnus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/leo_cygnus_icon.png">
-      <link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
-  </head>
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>David McHale | Index</title>
 
-  <body>
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
 
-  <!--//Container for fixed top navigation bar-->
-  <nav class="navbar-wrapper navbar-default navbar-fixed-top navbar-left" role="navigation">
-      <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header" style="margin-left:-5%;">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-          </div>
+<body>
+<div class="body_wrap">
+    <div class="container">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" style="z-index:5;">
-              <ul class="nav navbar-nav navbar-left">
+        <!-- content -->
+        <div class="content " role="main">
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Website Menu -->
+                    <div id="topmenu">
+                        <ul class="dropdown clearfix boxed boxed-blue">
+                            <li class="link-more"><a href="#"><i></i></a></li>
+                            <li class="menu-level-0"><a href="home.html"><span>Home</span></a></li>
+                            <li class="menu-level-0"><a href="about.html"><span>About</span></a></li>
+                            <li class="menu-level-0"><a href="#"><span>Services</span></a>
+                                <ul class="submenu-1">
+                                    <li class="menu-level-1"><a href="service_webdesign.html">Web Design</a></li>
+                                    <li class="menu-level-1"><a href="service_uidesign.html">User Interface Design</a></li>
+                                    <li class="menu-level-1"><a href="service_seo.html">Search Engine Optimization</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-level-0"><a href="#"><span>Portfolio</span></a>
+                                <ul class="submenu-1">
+                                    <li class="menu-level-1"><a href="portfolio_webdesign.html">Web Design</a></li>
+                                    <li class="menu-level-1"><a href="portfolio_uidesign.html">User interface Design</a></li>
+                                    <li class="menu-level-1"><a href="portfolio_seo.html">Search Engine Optimization</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-level-0"><a href="blog.html"><span>Blog</span></a></li>
+                            <li class="menu-level-0"><a href="contact.html"><span>Contact</span></a></li>
+                            <li class="menu-search">
+                                <form id="searchForm" class="menu-search-form" method="post">
+                                    <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
+                                    <input type="submit" value="" class="btn menu-search-submit" name="search-send" />
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/ Website Menu -->
+                </div>
+            </div>
+            <!--/ row -->
 
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="headerToolbarIcon2" src="img/my_account.png"> News<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_profile.png">News</a></li>
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/change_password.png">Blog</a></li>
-                          <li><a href="index.html"><img class="headerToolbarIcon" src="img/logout.png">Facebook</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="headerToolbarIcon2" src="img/my_social.png"> Music<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="https://soundcloud.com/leoandcygnus"><img class="headerToolbarIcon" src="img/my_social_1.png">SoundCloud</a></li>
-                          <li><a href="http://leoandcygnus.bandcamp.com/"><img class="headerToolbarIcon" src="img/my_social_1.png">BandCamp</a></li>
-                          <li><a href="http://www.thesixtyone.com/#/leoandcygnus/"><img class="headerToolbarIcon" src="img/my_social_1.png">TheSixtyOne</a></li>
-                          <li><a href="http://www.ourstage.com/profile/heleircbfcsk"><img class="headerToolbarIcon" src="img/my_social_1.png">OurStage</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="headerToolbarIcon2" src="img/my_blog.png"> Shows<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_blog_1.png">Upcoming Shows</a></li>
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_commerce_1.png">Past Shows</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="headerToolbarIcon2" src="img/my_commerce.png"> Info<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/product_registration.png">About</a></li>
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_shopping.png">Mailing List</a></li>
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_shopping.png">Press</a></li>
-                      </ul>
-                  </li>
-                  <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="headerToolbarIcon2" src="img/my_tools.png"> Store<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_business.png">Bandcamp</a></li>
-                          <li><a href="coming_soon.html"><img class="headerToolbarIcon" src="img/my_business.png">Commerce</a></li>
-                      </ul>
-                  </li>
-              </ul>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Avatar Placeholder -->
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h4 style="text-align:left; color:white;">Hello, my name is David McHale.</h4>
+                            <h5 style="text-align:left; color:white;">I'm a full stack web developer based in the Washington DC area. With two years of enterprise experience in technologies new and old, I can build an online presence for your small business, make it easier for customers to find your existing website, or develop powerful web or mobile applications to solve your everyday problems. </h5>
+                        </div>
+                    </div>
+                    <!--/ Avatar Placeholder -->
+                </div>
+            </div>
 
-          </div><!-- /.navbar-collapse -->
-      </div>
-  </nav>
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- Widget Weather -->
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h5>On the server-side I've worked with:</h5>
+                            <span class="subtitle-white">Python</span>
+                            <span class="subtitle-white">Java</span>
+                            <span class="subtitle-white">PHP</span>
+                            <span class="subtitle-white">MySQL</span>
+                            <span class="subtitle-white">Mezzanine</span>
+                        </div>
+                    </div>
+                    <!--/ Widget Weather -->
+                </div>
 
-  <!--//Modal for displaying password recovery form-->
-  <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  Leo & Cygnus Mailing List
-              </div>
-              <div class="modal-body">
-                  <div class="form-group">
-                      <!--This requires a PHP action to perform password recovery-->
-                      <form id="email" method="POST">
-                      <label for="inputEmailLogin" >Email Address</label>
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      </form>
-                  </div>
-                <p>Want to hear more great music and get updates on our latest gigs? Sign up now!</p>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-success" data-dismiss="modal">Submit </button>
-              </div>
-          </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+                <div class="col-sm-4">
+                    <!-- Avatar Placeholder -->
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h5>On the client-side I've worked with:</h5>
+                            <span class="subtitle-white">HTML5</span>
+                            <span class="subtitle-white">CSS3</span>
+                            <span class="subtitle-white">JS</span>
+                            <span class="subtitle-white">jQuery</span>
+                            <span class="subtitle-white">Django</span>
+                            <span class="subtitle-white">Satchmo</span>
+                        </div>
+                    </div>
+                    <!--/ Avatar Placeholder -->
+                </div>
 
-  <!--//Container for Wiowise Slogan-->
-  <div class="container" >
-      <div class="center-block" id="slogan" style="background:transparent;">
-          <h1 style="font-family:'Alef', sans-serif;">Where Lion & Swan Meet.</h1>
-      </div>
-  </div>
-
-  <!--//Container for logo and registration form-->
-  <div class="container mainContent" id="indexBody">
-      <div class="row">
-          <div class="col-md-6" >
-
-<iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/leoandcygnus" width="100%" height="72%" style="margin-bottom:-9%;" scrolling="yes" frameborder="yes"></iframe>
-              <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-              <script type="text/javascript">
-                  (function(){
-                      var widgetIframe = document.getElementById('sc-widget'),
-                              widget       = SC.Widget(widgetIframe);
-
-                      widget.bind(SC.Widget.Events.READY, function() {
-                          widget.bind(SC.Widget.Events.PLAY, function() {
-                              // get information about currently playing sound
-                              widget.getCurrentSound(function(currentSound) {
-                                  console.log('sound ' + currentSound.get('') + 'began to play');
-                              });
-                          });
-                          // get current level of volume
-                          widget.getVolume(function(volume) {
-                              console.log('current volume value is ' + volume);
-                          });
-                          // set new volume level
-                          widget.setVolume(50);
-                          // get the value of the current position
-                      });
-
-                  }());
-              </script>
-
-          </div>
-
-          <div class="col-md-6">
-              <div class="panel panel-info" style="margin-bottom:-9%;">
-                  <div class="panel-heading text-center blogPanelHeading" style='background-color:white; color:#767c7c; border-radius:0; height:5%;'>
-                      News
-                  </div>
-                  <div class="panel-body" id="newsPanel" style="overflow:auto; overflow-x:hidden; height:67%;">
-                      <p style="border-bottom:1px darkgrey solid; border-top:1px darkgrey solid;">
-                          1-16-2014 <br/>
-                          Hello everyone!<br/><br/>
-                          Last night we had way too much fun playing at Metropolitan Lounge in downtown Annapolis. Every Wednesday night, they host an open mic which we will be trying to attend as often as possible. We met some really great musicians and new friends, and hope to see some of you come out to see us and all of the great talent we have here in Annapolis.
-
-                          <br/><br/>In other news, we have uploaded a new song to our page! It's called "Psalms". We recorded a demo of it in Delaware with some friends, and have begun working on a full band version of it which will be added to our live sets, as well as a few other new songs, too. <br/><br/> -Daniel</p>
-
-                      <p style="border-bottom:1px darkgrey solid; border-top:1px darkgrey solid;">
-                          1-15-2014 <br/>
-                          Hey guys!<br/><br/>
-                          You can now find our music on the following sites:<br/><br/>
-
-                          <a href="https://soundcloud.com/leoandcygnus">SoundCloud</a><br/><br/>
-
-                          <a href="http://leoandcygnus.bandcamp.com/">BandCamp</a><br/><br/>
-
-                          <a href="http://www.thesixtyone.com/#/leoandcygnus/">TheSixtyOne</a><br/><br/>
-
-                          <a href="http://www.ourstage.com/profile/heleircbfcsk">OurStage</a><br/><br/>
-
-                          Please share our music with your friends, we will love you forever! <br/><br/>
-
-                          -Daniel </p>
-
-                      <p style="border-bottom:1px darkgrey solid; border-top:1px darkgrey solid;">
-                          1-14-2014 <br/>
-                          Hello everyone!<br/><br/>
-                          Next Sunday, January 19th, we will be performing at Washington, D.C.'s Tree House Lounge, located at 1006 Florida Ave NE
-                          Washington, DC 20002. <br/><br/> Doors for the show open at 7:30 PM, show starts at 8.<br/><br/> The lineup for the evening as of now is the following: <br/><br/>
-                          8pm Spencer Joyce<br/><br/>
-                          9pm The Creme<br/><br/>
-                          10pm Ubiquity Machine<br/><br/>
-                          11pm Jason Mendelson & The Open Doors<br/><br/>
-                          12am Leo & Cygnus<br/><br/>
-
-                          We are trying to get swapped for an earlier spot for Kelsey's sake, but all of these bands are awesome! You should definitely come out to see everyone. <br/><br/>
-
-                          For tickets, you can purchase them online at http://www.eventbrite.com/e/alchemical-records-presents-the-treehouse-showcase-tickets-10080560227 <br/><br/>
-
-                          OR you can also get them for $12 at the door of the venue. <br/><br/>
-
-                          Please come out and support us at our first DC show! <br/><br/> -Daniel</p>
-
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+                <div class="col-sm-4">
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h5>I've also worked with:</h5>
+                            <span class="subtitle-white">Node.JS</span>
+                            <span class="subtitle-white">LibGDX</span>
+                            <span class="subtitle-white">ExtJS</span>
+                            <span class="subtitle-white">Backbone</span>
+                            <span class="subtitle-white">Angular</span>
+                            <span class="subtitle-white">Ember</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ row -->
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Widget Social Buttons -->
+                    <div class="widget-container widget-social">
+                        <ul class="clearfix">
+                            <li class="social-facebook"><a href="#"><i>Facebook</i></a></li>
+                            <li class="social-twitter"><a href="#"><i>Twitter</i></a></li>
+                            <li class="social-dribble"><a href="#"><i>Dribble</i></a></li>
+                            <li class="social-deviantart"><a href="#"><i>DeviantArt</i></a></li>
+                            <li class="social-google"><a href="#"><i>Google+</i></a></li>
+                            <li class="social-vimeo"><a href="#"><i>Vimeo</i></a></li>
+                        </ul>
+                    </div>
+                    <!--/ Widget Social Buttons -->
+                </div>
+            </div>
+            <!--/ row -->
 
 
-  <!--//Container for fixed bottom navigation bar-->
+        </div>
+        <!--/ content -->
+    </div>
+    <!--/ container -->
+</div>
 
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<!-- main JS libs -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.0.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
 
-  <script>
-      $('#myModal').modal(options);
-  </script>
+<!-- Style CSS -->
+<link href="css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="style.css" media="screen" rel="stylesheet">
 
-  <script type="text/javascript" src="js/api.js"></script>
-  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+<!-- scripts -->
+<script src="js/general.js"></script>
 
+<!-- custom input -->
+<script src="js/jquery.customInput.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- Placeholders -->
+<script type="text/javascript" src="js/jquery.powerful-placeholder.min.js"></script>
+<!-- Lightbox prettyPhoto -->
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<script src="js/jquery.prettyPhoto.js"></script>
+<!-- CarouFredSel  -->
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script>
+    jQuery(document).ready(function($) {
 
+        $('#carouFredsel-1').carouFredSel({
+            next : "#carousel-next-1",
+            prev : "#carousel-prev-1",
+            auto: false,
+            scroll: {items : 1}
+        });
 
-  <script type="text/javascript">
-      (function(){
+        $(window).resize(function() {
 
-          var host2widgetBaseUrl = {
-              "wt.soundcloud.dev" : "wt.soundcloud.dev:9200/",
-              "wt.soundcloud.com" : "wt.soundcloud.com/player/",
-              "w.soundcloud.com"  : "w.soundcloud.com/player/"
-          };
+            $('#carouFredsel-1').carouFredSel({
+                next : "#carousel-next-1",
+                prev : "#carousel-prev-1",
+                auto: false,
+                scroll: {items : 1}
+            });
+        })
+    });
+</script>
+<!-- Progress Bars -->
+<script src="js/progressbar.js"></script>
+<!-- Calendar -->
+<script src="js/jquery-ui.multidatespicker.js"></script>
+<!-- range sliders -->
+<script src="js/jquery.slider.bundle.js"></script>
+<script src="js/jquery.slider.js"></script>
+<link rel="stylesheet" href="css/jslider.css">
+<!-- Video Player -->
+<link href="css/video-js.css" rel="stylesheet">
+<script src="js/video.js"></script>
 
-          var consoleBox = document.querySelector('.console');
+<!-- Scroll Bars -->
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+    jQuery(function()
+    {
+        jQuery('.scrollbar').jScrollPane({
+            verticalDragMaxHeight: 18,
+            verticalDragMinHeight:18
+        });
 
-          var forEach = Array.prototype.forEach;
+        jQuery('.scrollbar.style2').jScrollPane({
+            verticalDragMaxHeight: 28,
+            verticalDragMinHeight:28
+        });
 
-          function addEvent(element, eventName, callback) {
-              if (element.addEventListener) {
-                  element.addEventListener(eventName, callback, false);
-              } else {
-                  element.attachEvent(eventName, callback, false);
-              }
-          }
+        jQuery('.scrollbar.style3').jScrollPane({
+            verticalDragMaxHeight: 38,
+            verticalDragMinHeight:38
+        });
 
-          function clearConsole() {
-              consoleBox.value = '';
-          }
-
-          function updateConsole(value) {
-              consoleBox.value = value +"\n" + consoleBox.value;
-          }
-
-          var widgetUrl = "http://api.soundcloud.com/users/1539950/favorites";
-
-          consoleBox.value = "Loading...";
-
-          var iframe = document.querySelector('.iframe');
-          iframe.src = location.protocol + "//" + host2widgetBaseUrl[location.hostname] + "?url=" + widgetUrl;
-          var widget = SC.Widget(iframe);
-
-          var eventKey, eventName;
-          for (eventKey in SC.Widget.Events) {
-              (function(eventName, eventKey) {
-                  eventName = SC.Widget.Events[eventKey];
-                  widget.bind(eventName, function(eventData) {
-                      updateConsole("SC.Widget.Events." + eventKey +  " " + JSON.stringify(eventData || {}));
-                  });
-              }(eventName, eventKey))
-          }
-
-          var actionButtons = document.querySelectorAll('.actionButtons button');
-          forEach.call(actionButtons, function(button) {
-              addEvent(button, 'click', function(e) {
-                  if (e.target !== this) {
-                      e.stopPropagation();
-                      return false;
-                  }
-                  var input = this.querySelector('input');
-                  var value = input && input.value;
-                  widget[this.className](value);
-              });
-          });
-
-          var getterButtons = document.querySelectorAll('.getterButtons button');
-          forEach.call(getterButtons, function(button){
-              addEvent(button, 'click', function(e) {
-                  widget[this.className](function(value){
-                      updateConsole(button.getAttribute('caption') + " " + JSON.stringify(value));
-                  });
-              });
-          });
-
-          var widgetLinks = document.querySelectorAll('.widgetLinks a');
-          var widgetUrlInput = document.querySelector('.urlInput');
-          forEach.call(widgetLinks, function(link) {
-              addEvent(link, 'click', function(e) {
-                  widgetUrlInput.value = this.getAttribute("href");
-                  e.preventDefault();
-              });
-          });
-
-          var reloadButton = document.querySelector('.reload');
-          addEvent(reloadButton, 'click', function() {
-              clearConsole();
-              var widgetOptions = getWidgetOptions();
-              widgetOptions.callback = function(){
-                  updateConsole('Widget is reloaded.')
-              };
-              widget.load(widgetUrlInput.value, widgetOptions);
-          });
-
-          function getWidgetOptions() {
-              var optionInputs = document.querySelectorAll('.widgetOptions input');
-              var widgetOptions = {};
-              forEach.call(optionInputs, function(option){
-                  widgetOptions[option.id] = option.type === 'text' ? option.value : option.checked;
-              });
-              return widgetOptions;
-          }
-
-      }());
-  </script>
-  </body>
+        jQuery('.scrollbar.style4').jScrollPane({
+            verticalDragMaxHeight: 38,
+            verticalDragMinHeight:38
+        });
+    });
+</script>
+</body>
 </html>

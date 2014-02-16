@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>David McHale | Index</title>
+
+<!-- main JS libs -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.0.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="style.css" media="screen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="js/general.js"></script>
+
+<!-- custom input -->
+<script src="js/jquery.customInput.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- Placeholders -->
+<script type="text/javascript" src="js/jquery.powerful-placeholder.min.js"></script>
+<!-- Lightbox prettyPhoto -->
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<script src="js/jquery.prettyPhoto.js"></script>
+<!-- CarouFredSel  -->
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+
+        $('#carouFredsel-1').carouFredSel({
+            next : "#carousel-next-1",
+            prev : "#carousel-prev-1",
+            auto: false,
+            scroll: {items : 1}
+        });
+
+        $(window).resize(function() {
+
+            $('#carouFredsel-1').carouFredSel({
+                next : "#carousel-next-1",
+                prev : "#carousel-prev-1",
+                auto: false,
+                scroll: {items : 1}
+            });
+        })
+    });
+</script>
+<!-- Progress Bars -->
+<script src="js/progressbar.js"></script>
+<!-- Calendar -->
+<script src="js/jquery-ui.multidatespicker.js"></script>
+<!-- range sliders -->
+<script src="js/jquery.slider.bundle.js"></script>
+<script src="js/jquery.slider.js"></script>
+<link rel="stylesheet" href="css/jslider.css">
+<!-- Video Player -->
+<link href="css/video-js.css" rel="stylesheet">
+<script src="js/video.js"></script>
+
+<!-- Scroll Bars -->
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+	jQuery(function()
+	{
+		jQuery('.scrollbar').jScrollPane({
+			verticalDragMaxHeight: 18,
+			verticalDragMinHeight:18
+		});
+
+		jQuery('.scrollbar.style2').jScrollPane({
+			verticalDragMaxHeight: 28,
+			verticalDragMinHeight:28
+		});
+
+		jQuery('.scrollbar.style3').jScrollPane({
+			verticalDragMaxHeight: 38,
+			verticalDragMinHeight:38
+		});
+
+		jQuery('.scrollbar.style4').jScrollPane({
+			verticalDragMaxHeight: 38,
+			verticalDragMinHeight:38
+		});
+	});
+</script>
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="body_wrap">
+    <div class="container">
+
+        <!-- content -->
+        <div class="content " role="main">
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Website Menu -->
+                    <div id="topmenu">
+                        <ul class="dropdown clearfix boxed boxed-blue">
+                            <li class="link-more"><a href="#"><i></i></a></li>
+                            <li class="menu-level-0"><a href="#"><span>Home</span></a></li>
+                            <li class="menu-level-0"><a href="#"><span>About</span></a></li>
+                            <li class="menu-level-0"><a href="#"><span>Services</span></a>
+                                <ul class="submenu-1">
+                                    <li class="menu-level-1"><a href="service_webdesign.html">Web Design</a></li>
+                                    <li class="menu-level-1"><a href="service_uidesign.html">User Interface Design</a></li>
+                                    <li class="menu-level-1"><a href="service_seo.html">Search Engine Optimization</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-level-0"><a href="#"><span>Portfolio</span></a>
+                                <ul class="submenu-1">
+                                    <li class="menu-level-1"><a href="portfolio_webdesign.html">Web Design</a></li>
+                                    <li class="menu-level-1"><a href="portfolio_uidesign.html">User interface Design</a></li>
+                                    <li class="menu-level-1"><a href="portfolio_seo.html">Search Engine Optimization</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-level-0"><a href="blog.html"><span>Blog</span></a></li>
+                            <li class="menu-level-0"><a href="contact.html"><span>Contact</span></a></li>
+                            <li class="menu-search">
+                                <form id="searchForm" class="menu-search-form" method="post">
+                                    <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
+                                    <input type="submit" value="" class="btn menu-search-submit" name="search-send" />
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/ Website Menu -->
+                </div>
+            </div>
+            <!--/ row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Avatar Placeholder -->
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h4 style="text-align:left; color:white;">Hello, my name is David McHale.</h4>
+                            <h5 style="text-align:left; color:white;">I'm a full stack web developer based in the Washington DC area. With two years of enterprise experience in technologies new and old, I can build an online presence for your small business, make it easier for customers to find your existing website, or develop powerful web or mobile applications to solve your everyday problems. </h5>
+                        </div>
+                    </div>
+                    <!--/ Avatar Placeholder -->
+                </div>
+            </div>
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-4">
+                    <!-- Widget Weather -->
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h5>On the server-side I've worked with:</h5>
+                            <span class="subtitle-white">Python</span>
+                            <span class="subtitle-white">Java</span>
+                            <span class="subtitle-white">PHP</span>
+                            <span class="subtitle-white">MySQL</span>
+                            <span class="subtitle-white">Mezzanine</span>
+                        </div>
+                    </div>
+                    <!--/ Widget Weather -->
+                </div>
+
+                <div class="col-sm-4">
+                    <!-- Avatar Placeholder -->
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h5>On the client-side I've worked with:</h5>
+                            <span class="subtitle-white">HTML5</span>
+                            <span class="subtitle-white">CSS3</span>
+                            <span class="subtitle-white">JS</span>
+                            <span class="subtitle-white">jQuery</span>
+                            <span class="subtitle-white">Django</span>
+                            <span class="subtitle-white">Satchmo</span>
+                        </div>
+                    </div>
+                    <!--/ Avatar Placeholder -->
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="widget-container widget-avatar boxed boxed-blue">
+                        <div class="inner">
+                            <h5>I've also worked with:</h5>
+                            <span class="subtitle-white">Node.JS</span>
+                            <span class="subtitle-white">LibGDX</span>
+                            <span class="subtitle-white">ExtJS</span>
+                            <span class="subtitle-white">Backbone</span>
+                            <span class="subtitle-white">Angular</span>
+                            <span class="subtitle-white">Ember</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ row -->
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Widget Social Buttons -->
+                    <div class="widget-container widget-social">
+                        <ul class="clearfix">
+                            <li class="social-facebook"><a href="#"><i>Facebook</i></a></li>
+                            <li class="social-twitter"><a href="#"><i>Twitter</i></a></li>
+                            <li class="social-dribble"><a href="#"><i>Dribble</i></a></li>
+                            <li class="social-deviantart"><a href="#"><i>DeviantArt</i></a></li>
+                            <li class="social-google"><a href="#"><i>Google+</i></a></li>
+                            <li class="social-vimeo"><a href="#"><i>Vimeo</i></a></li>
+                        </ul>
+                    </div>
+                    <!--/ Widget Social Buttons -->
+                </div>
+            </div>
+            <!--/ row -->
+
+
+        </div>
+        <!--/ content -->
+    </div>
+    <!--/ container -->
+</div>
+</body>
+</html>
