@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+    <title>Brief D3 Examples</title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+<style>
+
+form {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+path {
+  fill-rule: evenodd;
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+.sun path {
+  fill: #6baed6;
+}
+
+.planet path {
+  fill: #9ecae1;
+}
+
+.annulus path {
+  fill: #c6dbef;
+}
+
+circle {
+  stroke: #000;
+  stroke-opacity: .5;
+}
+</style>
+<style type="text/css"></style><style id="holderjs-style" type="text/css"></style></head>
+
+<body style="height:auto;">
+
+    <div class="site-wrapper">
+
+      <div class="">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">D3 Examples</h3>
+                    <ul class="nav masthead-nav">
+                        <li class="active"><a href="http://getbootstrap.com/examples/cover/#">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+            <div class="inner cover" style="margin-top:15%;">
+            	<h1 class="cover-heading">
+            		Here are a few examples I put together to showcase D3.
+            	</h1>
+            	<div class="row">
+					<div class="col-md-12 gears">
+						<form>
+							<span> Gears rotating based on radio selection: </span> </br>
+  							<input type="radio" name="reference" id="ref-annulus">
+  							<label for="ref-annulus">Annulus</label><br>
+  							<input type="radio" name="reference" id="ref-planet" checked>
+  							<label for="ref-planet">Planets</label><br>
+  							<input type="radio" name="reference" id="ref-sun">
+  							<label for="ref-sun">Sun</label>
+						</form>
+
+    					<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+						<script>
+
+							var width = 960,
+							    height = 500,
+							    radius = 80,
+							    x = Math.sin(2 * Math.PI / 3),
+							    y = Math.cos(2 * Math.PI / 3);
+
+							var offset = 0,
+							    speed = 4,
+							    start = Date.now();
+
+							var svg = d3.select(".gears").append("svg")
+							    .attr("width", width)
+							    .attr("height", height)
+							  .append("g")
+							    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(.55)")
+							  .append("g");
+
+							var frame = svg.append("g")
+							    .datum({radius: Infinity});
+
+							frame.append("g")
+							    .attr("class", "annulus")
+							    .datum({teeth: 80, radius: -radius * 5, annulus: true})
+							  .append("path")
+							    .attr("d", gear);
+
+							frame.append("g")
+							    .attr("class", "sun")
+							    .datum({teeth: 16, radius: radius})
+							  .append("path")
+							    .attr("d", gear);
+
+							frame.append("g")
+							    .attr("class", "planet")
+							    .attr("transform", "translate(0,-" + radius * 3 + ")")
+							    .datum({teeth: 32, radius: -radius * 2})
+							  .append("path")
+							    .attr("d", gear);
+
+							frame.append("g")
+							    .attr("class", "planet")
+							    .attr("transform", "translate(" + -radius * 3 * x + "," + -radius * 3 * y + ")")
+							    .datum({teeth: 32, radius: -radius * 2})
+							  .append("path")
+							    .attr("d", gear);
+
+							frame.append("g")
+							    .attr("class", "planet")
+							    .attr("transform", "translate(" + radius * 3 * x + "," + -radius * 3 * y + ")")
+							    .datum({teeth: 32, radius: -radius * 2})
+							  .append("path")
+							    .attr("d", gear);
+
+							d3.selectAll("input[name=reference]")
+							    .data([radius * 5, Infinity, -radius])
+							    .on("change", function(radius1) {
+							      var radius0 = frame.datum().radius, angle = (Date.now() - start) * speed;
+							      frame.datum({radius: radius1});
+							      svg.attr("transform", "rotate(" + (offset += angle / radius0 - angle / radius1) + ")");
+							    });
+
+							d3.selectAll("input[name=speed]")
+							    .on("change", function() { speed = +this.value; });
+
+							function gear(d) {
+							  var n = d.teeth,
+							      r2 = Math.abs(d.radius),
+							      r0 = r2 - 8,
+							      r1 = r2 + 8,
+							      r3 = d.annulus ? (r3 = r0, r0 = r1, r1 = r3, r2 + 20) : 20,
+							      da = Math.PI / n,
+							      a0 = -Math.PI / 2 + (d.annulus ? Math.PI / n : 0),
+							      i = -1,
+							      path = ["M", r0 * Math.cos(a0), ",", r0 * Math.sin(a0)];
+							  while (++i < n) path.push(
+							      "A", r0, ",", r0, " 0 0,1 ", r0 * Math.cos(a0 += da), ",", r0 * Math.sin(a0),
+							      "L", r2 * Math.cos(a0), ",", r2 * Math.sin(a0),
+							      "L", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+							      "A", r1, ",", r1, " 0 0,1 ", r1 * Math.cos(a0 += da / 3), ",", r1 * Math.sin(a0),
+							      "L", r2 * Math.cos(a0 += da / 3), ",", r2 * Math.sin(a0),
+							      "L", r0 * Math.cos(a0), ",", r0 * Math.sin(a0));
+							  path.push("M0,", -r3, "A", r3, ",", r3, " 0 0,0 0,", r3, "A", r3, ",", r3, " 0 0,0 0,", -r3, "Z");
+							  return path.join("");
+							}
+
+							d3.timer(function() {
+							  var angle = (Date.now() - start) * speed,
+							      transform = function(d) { return "rotate(" + angle / d.radius + ")"; };
+							  frame.selectAll("path").attr("transform", transform);
+							  frame.attr("transform", transform); // frame of reference
+							});
+
+							</script>
+					</div>
+            	</div>
+            	<div class="row">
+					<div class="col-md-12 avoidance">
+						<span style="text-align:left;"> Example of collision avoidance using mouse input: </span>
+						<script type="text/javascript" src="js/d3.js"></script>
+	    				<script type="text/javascript" src="js/d3.geom.js"></script>
+	    				<script type="text/javascript" src="js/d3.layout.js"></script>
+	    				<script type="text/javascript">
+
+						var w = 960,
+						    h = 500;
+
+						var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
+						    color = d3.scale.category10();
+
+						var force = d3.layout.force()
+						    .gravity(0.05)
+						    .charge(function(d, i) { return i ? 0 : -2000; })
+						    .nodes(nodes)
+						    .size([w, h]);
+
+						var root = nodes[0];
+						root.radius = 0;
+						root.fixed = true;
+
+						force.start();
+
+						var svg = d3.select(".avoidance").append("svg:svg")
+						    .attr("width", w)
+						    .attr("height", h);
+
+						svg.selectAll("circle")
+						    .data(nodes.slice(1))
+						  .enter().append("svg:circle")
+						    .attr("r", function(d) { return d.radius - 2; })
+						    .style("fill", function(d, i) { return color(i % 3); });
+
+						force.on("tick", function(e) {
+						  var q = d3.geom.quadtree(nodes),
+						      i = 0,
+						      n = nodes.length;
+
+						  while (++i < n) {
+						    q.visit(collide(nodes[i]));
+						  }
+
+						  svg.selectAll("circle")
+						      .attr("cx", function(d) { return d.x; })
+						      .attr("cy", function(d) { return d.y; });
+						});
+
+						svg.on("mousemove", function() {
+						  var p1 = d3.svg.mouse(this);
+						  root.px = p1[0];
+						  root.py = p1[1];
+						  force.resume();
+						});
+
+						function collide(node) {
+						  var r = node.radius + 16,
+						      nx1 = node.x - r,
+						      nx2 = node.x + r,
+						      ny1 = node.y - r,
+						      ny2 = node.y + r;
+						  return function(quad, x1, y1, x2, y2) {
+						    if (quad.point && (quad.point !== node)) {
+						      var x = node.x - quad.point.x,
+						          y = node.y - quad.point.y,
+						          l = Math.sqrt(x * x + y * y),
+						          r = node.radius + quad.point.radius;
+						      if (l < r) {
+						        l = (l - r) / l * .5;
+						        node.x -= x *= l;
+						        node.y -= y *= l;
+						        quad.point.x += x;
+						        quad.point.y += y;
+						      }
+						    }
+						    return x1 > nx2
+						        || x2 < nx1
+						        || y1 > ny2
+						        || y2 < ny1;
+						  };
+						}
+
+					    </script>
+					</div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/docs.min.js"></script>
+   
+
+</body></html>
